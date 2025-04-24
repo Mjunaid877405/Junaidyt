@@ -8,10 +8,10 @@ def clone_voice(text):
     tts.tts_to_file(text=text, file_path="output.wav")
     return "output.wav"
 
-# Gradio UI with public share link
+# Gradio UI with public link
 gr.Interface(
     fn=clone_voice,
     inputs="text",
     outputs="audio",
     title="Voice Clone Demo"
-).launch(share=True)  # This line enables public link
+).launch(share=True)
